@@ -31,7 +31,7 @@ https://access.redhat.com/labs/ocpupgradegraph/update_path
 **Check that the guide points to your desired ocp version _(At this moment the guide is pointing to version 4.10)_**
 7)  Import script
 8)  Run script
-9)  Compress the "mirror" dir from your _removable media path_ using tar or tgz.
+9)  Compress the "mirror" dir from your _removable media path_ using tar or tgz. Example command for your use: $ tar -czvf <ocp_version>.tar.gz /<removable_media_path>
 10) Import _mirrored_ version to your local registry using the command propted at the end of the _mirror_ process in the "connected" bastion server to your local ocp images registry.
 
 
