@@ -29,7 +29,7 @@ LOCAL_SECRET_JSON=$pullpath
 echo "Release Name is \'ocp-release\'"
 RELEASE_NAME="ocp-release"
 
-ehco "Enter server architecture"
+echo "Enter server architecture"
 read arch
 ARCHITECTURE=$arch
 
