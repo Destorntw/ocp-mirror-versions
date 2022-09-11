@@ -1,37 +1,57 @@
-#!/bin/bash
+!/bin/bash
 
 echo "Whats your registry containers name"
 read dockerreg
+
 podman start $dockerreg
+
 echo "registry container should be up"
 echo podman ps -a | grep $dockerreg
+
+echo "enter registry port"
+read regport
+LOCAL_REGISTRY=$dockerreg:$regport
 
 echo "enter desired ocp version"
 read version
 export OCP_RELEASE=$version
 
-echo "enter registry name"
-read registry
-echo "enter registry port"
-read regport
-LOCAL_REGISTRY=$registry:$regport
-
-echo "Local Repo is \'ocp4/openshift4\' "
+echo "Local Repo is 'ocp4/openshift4' "
 LOCAL_REPOSITORY='ocp4/openshift4'
 
-echo "Product Repo is \'openshift-release-dev\'"
+echo "Product Repo is 'openshift-release-dev'"
 PRODUCT_REPO='openshift-release-dev'
 
 echo "enter path to pull secret"
 read pullpath
 LOCAL_SECRET_JSON=$pullpath
 
-echo "Release Name is \'ocp-release\'"
+echo "Release Name is 'ocp-release'"
 RELEASE_NAME="ocp-release"
 
-echo "Enter server architecture"
-read arch
-ARCHITECTURE=$arch
+
+echo -n "Choose server architecture -  (1) x86_64 (2) ppc64le (3) s390x: "
+read var
+echo Your number is $var
+if [ $var -eq 1 ]
+then
+        echo "Chosen arch is x86_64"
+        ARCHITECTURE=x86_64
+
+elif [ $var -eq 2 ]
+then
+        echo "Chosen arch is ppc64le"
+        ARCHITECTURE=ppc64le
+
+elif [ $var -eq 3 ]
+then
+        echo "Chosen arch is s390x"
+        ARCHITECTURE=s390x
+
+else
+        echo "Wrong choce please re-run the script"
+fi
+
 
 echo "enter removable media path to mirror images to"
 read mediapath
