@@ -30,7 +30,7 @@ https://access.redhat.com/labs/ocpupgradegraph/update_path
      (https://docs.openshift.com/container-platform/4.10/updating/updating-restricted-network-cluster.html)
 **Check that the guide points to your desired ocp version _(At this moment the guide is pointing to version 4.10)_**
 7)  Import script
-8)  **Dont forget to add run permission to script with _chmod +x_
+8)  **Dont forget to add run permission to script with _chmod +x_**
 9)  Run script
 10)  Compress the "mirror" dir from your _removable media path_ using tar or tgz. Example command for your use: $ tar -czvf <ocp_version>.tar.gz /<removable_media_path>
 11) Import _mirrored_ version to your local registry using the command propted at the end of the _mirror_ process in the "connected" bastion server to your local ocp images registry.
