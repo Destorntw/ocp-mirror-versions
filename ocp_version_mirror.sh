@@ -49,7 +49,7 @@ then
         ARCHITECTURE=s390x
 
 else
-        echo "Wrong choce please re-run the script"
+        echo "Wrong choice please re-run the script"
 fi
 
 
