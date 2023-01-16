@@ -40,6 +40,6 @@ Using the script is straight forward:
 1) Copy / Download the script and import to your _bastion_ machine.
 2) Add _run_ option to the "script.sh" using: $ chmod +x "script.sh"
 3) Input your variables values that are prompted from the script according to the questions stated in the _mirroring process overview_.
-4) Copy the _mirror_ command for you internal registry that will "hold" the ocp images in your "disconnected" environment. 
+4) Copy the _mirror_ command for your internal registry that will "hold" the ocp images in your "disconnected" environment. 
 
 ## Feel free to submit a pull request or hit me up for any feedback & improvements!
