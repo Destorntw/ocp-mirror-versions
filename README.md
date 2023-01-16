@@ -20,8 +20,7 @@ https://access.redhat.com/labs/ocpupgradegraph/update_path
 2)  Installed on this bastion servers should be the following packeges & RPM's:
     - Podman
     - bash-completion (for convinience)
-    - oc cli & kubectl from the following link (https://console.redhat.com/openshift/donwloads) **or**
-      from here (https://access.redhat.com/downloads) 
+    - oc cli & kubectl from the following link (https://console.redhat.com/openshift/downloads)  
 3)  Pull secret from this page (https://console.redhat.com/openshift/install/pull-secret)  
 4)  Have a registry container up and running - **for your convinience i've added a basic run command for one**
     - $ sudo mkdir -p /var/lib/registry
